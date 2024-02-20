@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        tablaDeMultiplicar();
+        ex4();
     }
 
-    private static void tablaDeMultiplicar() {
+    private static void ex4() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingresa un numero entre el 2 y el 9: ");
