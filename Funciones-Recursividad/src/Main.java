@@ -6,11 +6,44 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ex1(); 
-        ex2();
-        ex3();
-        ex4();
-        ex5();
+        Scanner sc = new Scanner(System.in);
+        int opcion =0;
+        System.out.println("Seleccione una opcion");
+        System.out.println("1: ex1 \n" +
+                           "2: ex2  \n" +
+                           "3: ex3   \n" +
+                           "4: ex4  \n" +
+                           "5: ex5   \n" +
+                           "6: salir");
+
+        opcion = sc.nextInt();
+
+        while (opcion !=6){
+            if (opcion == 1){
+                ex1();
+            } else if (opcion == 2) {
+                ex2();
+            }else if (opcion == 3) {
+                ex3();
+            }else if (opcion == 4) {
+                ex4();
+            }else if (opcion == 5) {
+                ex5();
+            }else {
+                System.out.println("selecciona una opcion valida");
+            }
+
+            System.out.println("-------------------------------");
+            System.out.println("Seleccione una opcion");
+            System.out.println("1: ex1 \n" +
+                    "2: ex2  \n" +
+                    "3: ex3   \n" +
+                    "4: ex4  \n" +
+                    "5: ex5   \n" +
+                    "6: salir");
+            opcion = sc.nextInt();
+
+        }
     }
 
     private static void ex5() {
@@ -221,20 +254,20 @@ public class Main {
     }       
     
 
-    public static boolean esPrimo(int num, int divisor) {
+    public static boolean essPrimo(int num, int divisor) {
         if (divisor <= 1) {
             return true;
         }
         if (num % divisor == 0) {
             return false;
         }
-        return esPrimo(num, divisor - 1);
+        return essPrimo(num, divisor - 1);
     }
 
     public static void imprimirPrimosHasta(int numero) {
         if (numero >= 1) {
             imprimirPrimosHasta(numero - 1);
-            if (esPrimo(numero, numero - 1)) {
+            if (essPrimo(numero, numero - 1)) {
                 System.out.print(numero + " ");
             }
         }
