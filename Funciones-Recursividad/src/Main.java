@@ -3,13 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        ex2();
+
+    }
+
+    private static void ex2() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingresa un numero entero: ");
         int numero = sc.nextInt();
 
         System.out.println("Números primos desde 1 hasta " + numero + ":");
         imprimirPrimosHasta(numero);
-
     }
 
     public static boolean esPrimo(int num, int divisor) {
