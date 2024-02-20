@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        ex1();
+
+    }
+
+    private static void ex1() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingresa un numero entero: ");
         int numero = sc.nextInt();
@@ -12,7 +17,6 @@ public class Main {
         }else {
             System.out.println("El numero no es primo");
         }
-
     }
 
     public static boolean esPrimo(int nro,int divisor){
