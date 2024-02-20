@@ -1,7 +1,13 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        cambioDeMoneda();
+    }
+
+    private static void cambioDeMoneda() {
+        DecimalFormat df = new DecimalFormat("#.##");
 
         Scanner sc = new Scanner(System.in);
         double real ;
@@ -23,17 +29,20 @@ public class Main {
         while (opcion != 4){
 
             if (opcion == 1) {
-                real = pesos / 168.50;
+                real =pesos / 168.50;
+                String real_formateado = df.format(real);
                 System.out.println("-----------------------------------");
-                System.out.println(pesos + " pesos valen " + real + " reales");
+                System.out.println(pesos + " pesos valen " + real_formateado + " reales");
             } else if (opcion == 2) {
                 dolar = pesos / 836.74;
+                String dolar_formateado = df.format(dolar);
                 System.out.println("-----------------------------------");
-                System.out.println(pesos + " pesos valen " + dolar + " dolares");
+                System.out.println(pesos + " pesos valen " + dolar_formateado + " dolares");
             } else if (opcion == 3) {
                 euro = pesos / 900.85;
+                String euro_formateado = df.format(euro);
                 System.out.println("-----------------------------------");
-                System.out.println(pesos + " pesos valen " + euro + " euros");
+                System.out.println(pesos + " pesos valen " + euro_formateado + " euros");
             } else {
                 System.out.println("-----------------------------------");
                 System.out.println("La opcion es incorrecta");
