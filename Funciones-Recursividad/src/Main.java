@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        tablaDeMultiplicar();
+    }
+
+    private static void tablaDeMultiplicar() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingresa un numero entre el 2 y el 9: ");
         int numero = sc.nextInt();
 
-        tablaDeMultiplicar(numero);
 
-    }
+        if (numero >= 2 && numero <= 9) {
+            System.out.println(" Tabla del " + numero);
 
-    public static void tablaDeMultiplicar(int num){
-        if (num >= 2 && num <=9){
-            System.out.println(" Tabla del "+num);
-
-            for (int i = 1; i <=10 ; i++) {
-                int prod = num * i;
-                System.out.println(num+" x "+i+" = "+prod);
+            for (int i = 1; i <= 10; i++) {
+                int prod = numero * i;
+                System.out.println(numero + " x " + i + " = " + prod);
             }
-        }else {
+        } else {
             System.out.println("El numero ingresado esta fuera de rango");
         }
     }
