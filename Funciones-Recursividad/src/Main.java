@@ -2,20 +2,24 @@ public class Main {
     public static void main(String[] args) {
 
 
+        ex3();
+
+    }
+
+    private static void ex3() {
         int[][] matriz = {
                 {1, 2, 0},
                 {3, 1, 4},
                 {3, 0, 1}
         };
 
-        
+
         int suma = 0;
         int producto = 1;
         int s_diagonal_principal= 0;
         int p_diagonal_principal= 1;
         int s_diagonal_sec = 0;
         int p_diagonal_sec = 1;
-
 
 
         // Mostrar la matriz
@@ -34,7 +38,6 @@ public class Main {
         System.out.println("El producto de los elementos de la diagonal principal es: "+prodDiagonalPrincipal(matriz, p_diagonal_principal));
         System.out.println("La suma de los elemento de la diagonal secundaria es: "+sumaDiagonalSec(matriz, s_diagonal_sec));
         System.out.println("El producto de los elementos de la diagonal secundaria es: "+prodDiagonalSec(matriz, p_diagonal_sec));
-
     }
 
     private static int prodDiagonalSec(int[][] matriz, int p_diagonal_sec) {
