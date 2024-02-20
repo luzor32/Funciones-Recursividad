@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        cambioDeMoneda();
+        ex5();
     }
 
-    private static void cambioDeMoneda() {
+    private static void ex5() {
         DecimalFormat df = new DecimalFormat("#.##");
 
         Scanner sc = new Scanner(System.in);
